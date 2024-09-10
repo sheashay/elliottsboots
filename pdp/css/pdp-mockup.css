@@ -44,6 +44,7 @@ a:focus, a:hover {
 /** product image styles **/
 #image-container {
   display: flex;
+  margin-bottom: 3rem;
 }
 #product-img-main {}
 #image-thumbs {

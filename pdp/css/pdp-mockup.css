@@ -1,0 +1,528 @@
+@charset "UTF-8";
+/* CSS Document */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+}
+body {
+  font-family: Open Sans;
+  font-size: 1rem;
+  line-height: 1.75em;
+}
+a:focus, a:hover {
+  color: #23527c;
+}
+.product_page_content {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+}
+/** breadcrumb styles **/
+.product-data {}
+#breadcrumb-container {
+  opacity: 0.8;
+  white-space: nowrap;
+  text-align: left;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 1);
+  padding: 1rem 0;
+}
+.bc-slash {
+  color: rgba(193, 193, 193, 1);
+}
+.bc-current {
+  color: rgba(97, 97, 97, 1);
+}
+/** product image styles **/
+#image-container {
+  display: flex;
+}
+#product-img-main {}
+#image-thumbs {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+div.product-img-thumb {
+  border: 1px solid #E7E7E7;
+  margin: 0;
+  max-width: 86px;
+}
+.product-img-thumb img {
+  border: 5px solid #fff;
+  aspect-ratio: 1/1;
+  width: 100%;
+  object-fit: cover;
+  transition: all 0.5s;
+}
+.active-image {
+  border-color: #7D7D7D;
+}
+.product-img-main img {
+  aspect-ratio: 1/1;
+  width: 100%;
+  object-fit: cover;
+  transition: all 0.5s;
+}
+/** product brand styles **/
+#brand {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#brand-name {
+  text-align: left;
+  font-family: Bebas Neue;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 27px;
+  color: rgba(123, 123, 123, 1);
+}
+#brand-shop-link {
+  text-align: right;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  color: rgba(123, 123, 123, 1);
+  text-decoration: underline;
+}
+#product-title h1 {
+  text-align: left;
+  font-family: BebasNeueBold, Bebas Neue;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 38px;
+  color: rgba(0, 0, 0, 1);
+  line-height: 1.1;
+}
+#product-sku {
+  font-size: 14px;
+  color: rgba(123, 123, 123, 1);
+}
+/** product ratings **/
+#product-ratings {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0;
+}
+.rating-star-container {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+.rating-star-container svg {
+  width: 14.935px;
+  height: 14.002px;
+}
+#star1 svg {
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+#star2 svg {
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+#star3 svg {
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+#star4 svg {
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+#star5 svg {
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+.rating-star-container path {
+  fill: rgba(246, 179, 35, 1);
+}
+#rating-avg {
+  font-size: 13px;
+  color: rgba(45, 38, 32, 1);
+  text-transform: uppercase;
+  background-color: #eee;
+  padding: 0 4px;
+}
+#rating-total {
+  font-size: 13px;
+  color: rgba(123, 123, 123, 1);
+  text-transform: uppercase;
+}
+#rating-recommend {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  text-align: left;
+  font-size: 12px;
+  color: rgba(123, 123, 123, 1);
+  margin-top: 0;
+}
+.icon-green-checkmark {
+  width: 13.5px;
+  height: 13.5px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+  margin-right: 8px;
+}
+#icon-green-checkmark {
+  fill: rgba(48, 156, 16, 1);
+}
+/** product price **/
+#product-price {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
+}
+#price {
+  opacity: 0.79;
+}
+#price-current {
+  white-space: nowrap;
+  font-family: BebasNeueBold, Bebas Neue;
+  font-weight: bold;
+  font-size: 28px;
+  margin-right: 1.5rem;
+}
+.price-sale {
+  color: rgba(209, 0, 14, 1);
+}
+#price-original {
+  font-family: Bebas Neue;
+  font-size: 22px;
+  color: rgba(123, 123, 123, 1);
+  text-decoration: line-through;
+}
+#amt-saved {
+  opacity: 0.8;
+  white-space: nowrap;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 15px;
+  color: rgba(209, 0, 14, 1);
+  text-transform: uppercase;
+  margin-top: 0;
+}
+/** product variations **/
+div.product-variation-tag {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  margin-bottom: .25em;
+  margin-top: 0;
+}
+#product-variation-color, #product-variation-size, #product-variation-width {
+  margin-bottom: .25em;
+  margin-top: 0;
+}
+.variation-label {
+  white-space: nowrap;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 1);
+  text-transform: uppercase;
+  margin-right: .25em;
+}
+.variation-description {
+  white-space: nowrap;
+  color: rgba(62, 62, 62, 1);
+}
+#product-variation-size {
+  justify-content: space-between;
+}
+/** product size chart **/
+#size-chart {
+  display: flex;
+  align-items: center;
+}
+#chart-link {
+  white-space: nowrap;
+  text-align: right;
+  font-size: 12px;
+  color: rgba(123, 123, 123, 1);
+  text-decoration: underline;
+}
+#chart-link svg {
+  overflow: visible;
+  width: 20.25px;
+  height: 12.343px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+  margin-right: .5em;
+}
+#chart-link path {
+  fill: rgba(123, 123, 123, 1);
+  stroke: rgba(123, 123, 123, 1);
+  stroke-width: 0.25px;
+  stroke-linejoin: miter;
+  stroke-linecap: butt;
+  stroke-miterlimit: 4;
+  shape-rendering: auto;
+}
+#chart-link a:hover path {
+  fill: orange;
+}
+/** product size options **/
+#size-options, #width-options {
+  margin-top: 0;
+}
+.options-list {
+  list-style: none;
+  display: grid;
+  gap: .5rem;
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: 1fr; /* equal height */
+}
+.options-list li a {
+  background-color: #fff;
+  border: 1px solid #E0E0E0;
+  text-align: center;
+  display: block;
+  text-decoration: none;
+  padding: .8em .4em;
+  font-size: 1rem;
+  color: rgba(62, 62, 62, 1);
+  white-space: nowrap;
+  line-height: 1em;
+}
+.options-list li a:hover, .options-list li a:focus {
+  font-weight: 500;
+  color: #23527c;
+  border-color: #23527c;
+}
+.options-list li.size-unavailable a {
+  background-color: #EDEDED;
+  background: linear-gradient(to bottom right, #EDEDED, #EDEDED 49%, #E0E0E0 49%, #E0E0E0 51%, #EDEDED 51%, #EDEDED);
+  opacity: 0.8;
+}
+.options-list li.size-unavailable a:hover, .options-list li.size-unavailable a:focus {
+  font-weight: normal;
+  color: inherit;
+  border-color: #E0E0E0;
+  cursor: default;
+}
+.options-list li.selected-option a {
+  background: #000000;
+  border-color: #000000;
+  color: #fff;
+}
+/** product width **/
+#width-options .options-list {
+  grid-template-columns: repeat(4, 1fr);
+}
+/** product qty **/
+#product-qty .options-list {
+  grid-template-columns: 2rem 3rem 2rem;
+  column-gap: 0;
+}
+#product-qty .options-list li a {
+  font-weight: bold;
+}
+#product-qty .options-list li.qty-control a {
+  background: #F0F0F0;
+}
+/** product add to cart button **/
+#add-to-cart {}
+#add-to-cart button, #add-to-cart input[type="submit"] {
+  width: 100%;
+  background-color: black;
+  color: white;
+  padding: .5em 3em .3em 3em;
+  border: none;
+  border-radius: 3px;
+  font-size: 16px;
+  cursor: pointer;
+  font-family: Bebas Neue;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+  color: rgba(255, 255, 255, 1);
+  text-transform: uppercase;
+  line-height: 1em;
+}
+#add-to-cart button:hover, #add-to-cart input[type="submit"]:hover {
+  background-color: #333; /* Darker black on hover */
+}
+/** product add to favorites **/
+#add-to-favs {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+#add-to-favs svg {
+  overflow: visible;
+  width: 19.448px;
+  height: 16.671px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+  margin-right: .5rem;
+}
+#add-to-favs path {
+  fill: rgba(0, 0, 0, 1);
+}
+#add-to-favs a:hover path {
+  fill: red;
+}
+#add-to-favs a {
+  white-space: nowrap;
+  font-family: Bebas Neue;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  color: rgba(0, 0, 0, 1);
+  text-transform: uppercase;
+}
+/** product shipping **/
+#shipping-returns {}
+#shipping-returns .sr-container {
+  display: flex;
+  align-items: center;
+}
+#shipping-returns .sr-message {
+  white-space: nowrap;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 1);
+  text-transform: uppercase;
+  margin-left: .5rem;
+}
+#shipping-returns path {
+  fill: rgba(0, 0, 0, 1);
+}
+#sr-shipping .icon-truck {
+  position: relative;
+  width: 22.633px;
+  height: 17.12px;
+}
+svg.truck {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  overflow: visible;
+  width: 22.632px;
+  height: 17.12px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+svg.truck-line1 {
+  position: absolute;
+  left: 0.978px;
+  top: 3.914px;
+  overflow: visible;
+  width: 8.317px;
+  height: 1.468px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+svg.truck-line2 {
+  position: absolute;
+  left: 0px;
+  top: 7.827px;
+  overflow: visible;
+  width: 6.36px;
+  height: 1.468px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+#sr-returns .icon-rewind {
+  position: relative;
+  width: 22.633px;
+}
+#sr-returns svg {
+  overflow: visible;
+  width: 15.129px;
+  height: 17.86px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+#sr-returns path {
+  fill: rgba(0, 0, 0, 1);
+  stroke: rgba(0, 0, 0, 1);
+  stroke-width: 0.5px;
+  stroke-linejoin: miter;
+  stroke-linecap: butt;
+  stroke-miterlimit: 4;
+  shape-rendering: auto;
+}
+/** product returns **/
+hr.thin-line {
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+.accordion-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.accordion-title h2 {
+  white-space: nowrap;
+  text-align: left;
+  font-family: Bebas Neue;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  color: rgba(0, 0, 0, 1);
+  text-transform: uppercase;
+}
+.accordion-toggle {
+  position: relative;
+  width: 17px;
+  height: 17px;
+  margin-right: .5rem;
+}
+.accordion-toggle svg.toggle-open {
+  overflow: visible;
+  position: absolute;
+  width: 17px;
+  height: 2px;
+  left: 0px;
+  top: 8.5px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+.accordion-toggle svg.toggle-open path {
+  fill: transparent;
+  stroke: rgba(0, 0, 0, 1);
+  stroke-width: 2px;
+  stroke-linejoin: miter;
+  stroke-linecap: butt;
+  stroke-miterlimit: 4;
+  shape-rendering: auto;
+}
+.accordion-toggle svg.toggle-closed {
+  overflow: visible;
+  position: absolute;
+  width: 2px;
+  height: 17px;
+  left: 8.5px;
+  top: 0px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+.accordion-toggle svg.toggle-closed path {
+  fill: transparent;
+  stroke: rgba(0, 0, 0, 1);
+  stroke-width: 2px;
+  stroke-linejoin: miter;
+  stroke-linecap: butt;
+  stroke-miterlimit: 4;
+  shape-rendering: auto;
+}
+/** product paypal **/
+#paypal-pmt {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .5rem 0;
+}
+#paypal-message {
+  font-size: 12px;
+  color: rgba(62, 62, 62, 1);
+  margin-left: 1.5rem;
+  line-height: 1.3em;
+}
+#paypal-message a {
+  text-decoration: underline;
+}
+/** product description **/
+#accordion-text {
+  margin-top: 0;
+}
+#accordion-text p {
+  margin-bottom: 1.5rem;
+}
+#accordion-text ul {
+  padding-left: 1.25rem;
+}

@@ -20,22 +20,26 @@ a:focus, a:hover {
   margin: 0 auto;
 }
 /** breadcrumb styles **/
-.product-data {}
 #breadcrumb-container {
+  display: flex;
   opacity: 0.8;
-  white-space: nowrap;
-  text-align: left;
-  font-style: normal;
-  font-weight: normal;
   font-size: 14px;
   color: rgba(0, 0, 0, 1);
   padding: 1rem 0;
+  line-height: 1.4em;
 }
-.bc-slash {
+.bc-term {
+}
+.bc-term:after{
+  content: '/';
   color: rgba(193, 193, 193, 1);
+  padding: 0 .3em;
 }
 .bc-current {
   color: rgba(97, 97, 97, 1);
+}
+.bc-current:after{
+  content: '';
 }
 /** product image styles **/
 #image-container {

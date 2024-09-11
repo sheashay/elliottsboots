@@ -1,10 +1,19 @@
 @charset "UTF-8";
 /* CSS Document */
+body, html {
+  overflow: auto; /* Ensure body/html are not clipping content */
+  overflow: visible !important;
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   border: none;
+}
+.bebas-neue-regular {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 body {
   font-family: Open Sans;
@@ -30,7 +39,7 @@ a:focus, a:hover {
   position: relative;
 }
 h1, h2, h3, h4, h5, h6 {
-  font-family: BebasNeueBold, Bebas Neue;
+  font-family: "Bebas Neue", sans-serif;
   font-style: normal;
   font-weight: bold;
   line-height: 1.2;
@@ -39,27 +48,21 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: clamp(1.8rem, 4vw + 1rem, 2.4rem);
 }
-
 h2 {
   font-size: clamp(1.6rem, 3.5vw + 0.8rem, 2rem);
 }
-
 h3 {
   font-size: clamp(1.4rem, 3vw + 0.6rem, 1.8rem);
 }
-
 h4 {
   font-size: clamp(1.2rem, 2.5vw + 0.4rem, 1.6rem);
 }
-
 h5 {
   font-size: clamp(1rem, 2vw + 0.3rem, 1.4rem);
 }
-
 h6 {
   font-size: clamp(0.9rem, 1.5vw + 0.2rem, 1.2rem);
 }
-
 img {
   max-width: 100%;
   height: auto;
@@ -135,7 +138,7 @@ div.product-img-thumb:hover, div.product-img-thumb.active-image {
 }
 #brand-name {
   text-align: left;
-  font-family: Bebas Neue;
+  font-family: "Bebas Neue", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 27px;
@@ -228,7 +231,7 @@ div.product-img-thumb:hover, div.product-img-thumb.active-image {
 }
 #price-current {
   white-space: nowrap;
-  font-family: BebasNeueBold, Bebas Neue;
+  font-family: "Bebas Neue", sans-serif;
   font-weight: bold;
   font-size: 28px;
   margin-right: 1.5rem;
@@ -237,7 +240,7 @@ div.product-img-thumb:hover, div.product-img-thumb.active-image {
   color: rgba(209, 0, 14, 1);
 }
 #price-original {
-  font-family: Bebas Neue;
+  font-family: "Bebas Neue", sans-serif;
   font-size: 22px;
   color: rgba(123, 123, 123, 1);
   text-decoration: line-through;
@@ -379,7 +382,7 @@ div.product-variation-tag {
   border-radius: 3px;
   font-size: 16px;
   cursor: pointer;
-  font-family: Bebas Neue;
+  font-family: "Bebas Neue", sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 26px;
@@ -411,7 +414,7 @@ div.product-variation-tag {
 }
 #add-to-favs a {
   white-space: nowrap;
-  font-family: Bebas Neue;
+  font-family: "Bebas Neue", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -526,7 +529,7 @@ hr.thin-line {
 .accordion-title h2 {
   white-space: nowrap;
   text-align: left;
-  font-family: Bebas Neue;
+  font-family: "Bebas Neue", sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 24px;
@@ -618,4 +621,55 @@ ul.specs li img {
   height: 16px;
   width: 16px;
   margin: 0;
+}
+/* Modal container - hidden by default */
+.pdp-modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw; /* Full viewport width */
+  height: 100vh; /* Full viewport height */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  z-index: 10000;
+}
+.pdp-modal-content {
+  position: relative;
+  margin: auto;
+  padding: 20px;
+  background-color: #fff;
+  width: 80%; /* Adjust as needed */
+  max-width: 600px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  top: 50%;
+  transform: translateY(-50%);
+}
+/* Close button */
+.pdp-modal-close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.pdp-modal-close:hover, .pdp-modal-close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+table, th, td {
+  border: 1px solid #ddd;
+}
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+th {
+  background-color: #f2f2f2;
 }

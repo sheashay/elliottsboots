@@ -81,8 +81,11 @@ img {
   color: rgba(0, 0, 0, 1);
   padding: 1rem 0;
   line-height: 1.4em;
+  flex-wrap: wrap; /* Allows items to wrap on mobile */
 }
-.bc-term {}
+.bc-term {
+  display: inline-block;
+}
 .bc-term:after {
   content: '/';
   color: rgba(193, 193, 193, 1);
@@ -93,6 +96,20 @@ img {
 }
 .bc-current:after {
   content: '';
+}
+/* Mobile breadcrumb styles */
+@media only screen and (max-width: 768px) {
+  /* Make sure the last item takes full width */
+  .bc-term.bc-current {
+    flex-basis: 100%; /* Make the last item take up the full width */
+    text-align: left; /* Align text to the left */
+    margin-top: .5em; /* Optional: Adds some space on top */
+  }
+
+  /* Optional: Make sure the other breadcrumb terms don't wrap awkwardly */
+  .bc-term {
+    flex-basis: auto;
+  }
 }
 /** product image styles **/
 #image-container {

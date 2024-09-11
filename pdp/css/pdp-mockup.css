@@ -107,6 +107,10 @@ div.product-img-thumb {
   margin: 0;
   max-width: 86px;
 }
+div.product-img-thumb:hover, div.product-img-thumb.active-image {
+  border: 1px solid #7B7B7B;
+  cursor: pointer;
+}
 .product-img-thumb img {
   border: 5px solid #fff;
   aspect-ratio: 1/1;

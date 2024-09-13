@@ -9,7 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Uni+Neue:wght@700&display=swap" rel="stylesheet">
 <style>
 /* Reset some default browser styles */
-body, h1, ul, li {
+body, h1,h2, ul, li {
 	margin: 0;
 	padding: 0;
 }
@@ -30,6 +30,12 @@ body {
 	font-weight: 400;
 	font-style: normal;
 }
+a {
+	color: #007BFF;
+}
+a:hover {
+	color: #0056b3;
+}
 #container {
 	text-align: center;
 	padding: 5vw;
@@ -39,25 +45,25 @@ body {
 	margin-bottom: 20px;
 }
 h1 {
-	font-size: 24px;
+	font-size: 2rem;
 	margin-bottom: 20px;
 }
 ul {
 	list-style: none;
+  padding: 2rem;
 }
-li {
-	margin-bottom: 10px;
-}
-/* Target only links inside #container */
-#container a {
+ul a {
 	text-decoration: none;
-	color: #007BFF;
 	font-size: 1.25rem;
 	transition: color 0.3s;
 }
-#container a:hover {
-	color: #0056b3;
+li {
+	margin-bottom: 1em;
 }
+  section {
+    text-align: left;
+  }
+
 /* Footer styles */
 footer {
 	text-align: center;
@@ -73,6 +79,57 @@ footer a {
 footer a:hover {
 	text-decoration: underline;
 }
+pre {
+	background-color: #f4f4f4;
+	padding: 15px;
+	border: 1px solid #ddd;
+	overflow-x: auto;
+}
+code {
+	font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+	background: #F6F6F3;
+	border-radius: 6px;
+	padding: .5em;
+  display: flex;
+  align-content: stretch;
+}
+hr.thin-line {
+	border: 0;
+	height: 0;
+	border-top: 1px solid rgba(0, 0, 0, 0.1);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+	margin: 2rem 0;
+}
+.button {
+	padding: .5em 1.5em;
+	cursor: pointer;
+	border-radius: 50px;
+	font-size: 14px;
+}
+.button-primary, a.button-primary {
+	background-color: #2A3A8E;
+	border: 2px solid #2A3A8E;
+	color: white !important;
+}
+.button-primary:hover {
+	background-color: #1D2963;
+}
+.button-code {
+	background-color: #E9E9E9;
+	border: 2px solid #E9E9E9;
+	color: #2A3A8E;
+	border-radius: 4px;
+  padding: .25em 1em;
+}
+.button-code:hover {
+	background-color: #fff;
+	color: #2A3A8E;
+}
+  .render-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 </style>
 </head>
 
@@ -81,7 +138,18 @@ footer a:hover {
 	<h1>Elliotts Boots HTML Mockups</h1>
 	<ul>
 		<li><a href="pdp/index.html">PDP (product detail page)</a></li>
+		<li><a class="button button-primary" href="https://html-preview.github.io/?url=https://raw.githubusercontent.com/sheashay/elliottsboots/main/pdp/index.html">HTML Preview Render</a></li>
 	</ul>
+	<hr class="thin-line">
+  <section>
+	<h2>Git-Forge HTML Preview</h2>
+  <p>Prepend this code to the URL:</p>
+	<p><code id="codeSnippet">https://html-preview.github.io/?url=</code></p>
+	<div class="render-info">
+    <small><a href="https://html-preview.github.io/" target="_blank">Source</a></small>
+		<button class="button button-code" onclick="copyToClipboard()">Copy Code</button>
+	</div>
+    </section>
 </div>
 
 <!-- Footer -->
@@ -89,10 +157,34 @@ footer a:hover {
 	<p>&copy; <span id="year"></span> - Developed by <a href="https://www.blueskycommerce.com" target="_blank">BlueSky Commerces</a></p>
 </footer>
 
-<!-- JavaScript for Auto Year --> 
+<!-- JavaScript for Auto Year and Copy Functionality --> 
 <script>
     // Automatically insert the current year
     document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+
+    // Copy to clipboard function
+    function copyToClipboard() {
+        // Get the code element
+        var codeSnippet = document.getElementById("codeSnippet");
+        
+        // Create a temporary textarea element to hold the text
+        var tempTextArea = document.createElement("textarea");
+        tempTextArea.value = codeSnippet.textContent;
+        document.body.appendChild(tempTextArea);
+        
+        // Select the text inside the textarea
+        tempTextArea.select();
+        tempTextArea.setSelectionRange(0, 99999); // For mobile devices
+        
+        // Copy the selected text to clipboard
+        document.execCommand("copy");
+        
+        // Remove the temporary textarea
+        document.body.removeChild(tempTextArea);
+
+        // Alert the user (optional)
+        alert("Code copied to clipboard!");
+    }
+</script>
 </body>
 </html>
